@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRChattingViewController">
+            <connections>
+                <outlet property="commentBarView" destination="HDi-yH-6bt" id="me7-cV-T3l"/>
+                <outlet property="imageCountLabel" destination="Qhb-T4-Tgg" id="5So-oy-RkE"/>
+                <outlet property="tableView" destination="mUs-Bo-jlR" id="XCw-Oh-hcu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mUs-Bo-jlR">
+                    <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iuL-LO-sLB"/>
+                        <outlet property="delegate" destination="-1" id="CbH-j4-Fz3"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDi-yH-6bt">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3C-as-2bu">
+                            <rect key="frame" x="0.0" y="2" width="40" height="39"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="compose_toolbar_picture.png"/>
+                            <state key="highlighted" image="compose_toolbar_picture_highlighted.png"/>
+                            <connections>
+                                <action selector="clicked:" destination="-1" eventType="touchUpInside" id="acs-w6-cal"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74p-Sa-3B3">
+                            <rect key="frame" x="40" y="2" width="37" height="39"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="compose_emoticonbutton_background.png"/>
+                            <state key="highlighted" image="compose_emoticonbutton_background_highlighted.png"/>
+                            <connections>
+                                <action selector="clicked:" destination="-1" eventType="touchUpInside" id="AJ2-Qr-xFd"/>
+                            </connections>
+                        </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-T4-Tgg">
+                            <rect key="frame" x="24" y="5" width="16" height="16"/>
+                            <color key="backgroundColor" red="1" green="0.064200611399999996" blue="0.25340426090000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLd-8G-Z4h">
+                            <rect key="frame" x="329" y="7" width="30" height="30"/>
+                            <state key="normal" title="发送"/>
+                            <connections>
+                                <action selector="sendAction:" destination="-1" eventType="touchUpInside" id="7Og-oh-eFx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" alpha="0.69999998807907104" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hna-BA-atj">
+                            <rect key="frame" x="74" y="4" width="36" height="36"/>
+                            <state key="normal" title="Button" image="2.png"/>
+                            <connections>
+                                <action selector="clicked:" destination="-1" eventType="touchUpInside" id="O6O-Nl-gVg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="339.5" y="114.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="2.png" width="71" height="72"/>
+        <image name="compose_emoticonbutton_background.png" width="24" height="24"/>
+        <image name="compose_emoticonbutton_background_highlighted.png" width="24" height="24"/>
+        <image name="compose_toolbar_picture.png" width="24" height="24"/>
+        <image name="compose_toolbar_picture_highlighted.png" width="24" height="24"/>
+    </resources>
+</document>

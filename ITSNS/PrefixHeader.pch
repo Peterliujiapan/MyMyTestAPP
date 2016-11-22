@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  ITSNS
+//
+//  Created by Ivan on 16/3/2.
+//  Copyright © 2016年 Ivan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIImageView+WebCache.h"
+#import "UIViewExt.h"
+#import "Bmob.h"
+#import <MBProgressHUD.h>
+#define LYNavi(vc) [[LYMainNavigatoinController alloc]initWithRootViewController:vc]
+#define LYGreenColor [UIColor colorWithRed:62.0/255 green:180.0/255 blue:62.0/255 alpha:1]
+#define LYBlueColor [UIColor colorWithRed:40.0/255 green:118.0/255 blue:236.0/255 alpha:1]
+#define LYSW [UIScreen mainScreen].bounds.size.width
+#define LYSH [UIScreen mainScreen].bounds.size.height
+#define LYAccountPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"userLoginInfo.plist"]
+
+
+#define LYTextSize 12
+#define LYMargin 10
+#define LYImageSize 112
+#define LYGrayColor [UIColor colorWithRed:244.0/255 green:244.0/255 blue:244.0/255 alpha:1]
+
+
+//网页登陆地址
+#define LYURL_Login [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@",LYAppKey,LYRedirectURI]
+
+
+
+#define LYAppKey @"4200087127"
+#define LYRedirectURI @"http://www.lanyikeji.com"
+#define LYAppSecret @"dc1990c7519ea3ab31b2edfa0b5d1c46"
+#endif /* PrefixHeader_pch */
